@@ -45,7 +45,7 @@ const clearSearch = document.querySelector('.btn-warning');
 
 window.addEventListener('load', function (e) {
     let ls = localstorage.getTasks();
-    if (ls.length) {
+    if (ls && ls.length) {
         ls.forEach(task => {
             tasks.addTask(task)
                 .then(oneTask => ui.addTask(oneTask));
